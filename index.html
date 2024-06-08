@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="BookMarker ">
+
+
+        <header class="py-5">
+            <h1 class="text-center text-capitalize">Bookmarker</h1>
+        </header>
+        <div class="BookMarker-body container py-5">
+            <article class="title d-flex justify-content-center">
+                <h2 class="text-capitalize py-2">
+                    <i class="fa-solid fa-bookmark  px-3"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark  px-3"></i>
+                </h2>
+
+            </article>
+
+            <div id="alert" class="alert alert-danger mt-4 py-2 text-center d-none">
+                is not valid ... please try again <br>Site name must contain at least 3 characters <br>Site URL must be
+                a valid one
+            </div>
+
+            <div class="input">
+                <label for="Bookmarker_Name" class="pt-3 pb-1 fw-bold">
+                    <i class="fa-solid fa-book-bookmark pe-2"></i>
+                    Site Name
+                </label>
+                <input oninput="re(this)" id="Bookmarker_Name" type="text" placeholder="Bookmarker Name"
+                    class="form-control py-2 px-3  border-1 rounded-3">
+
+
+                <label for="Website_URL" class="pt-3 pb-1 fw-bold">
+                    <i class="fa-solid fa-link pe-2"></i>
+                    Site URL
+                </label>
+                <input oninput="re(this)" id="Website_URL" type="text" placeholder="Website URL"
+                    class="form-control py-2 px-3  border-1 rounded-3">
+
+                <div id="btn" class="d-flex justify-content-center">
+                    <button class="text-capitalize mt-4" onclick="sendInfo()">submit</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="container pt-4 text-center">
+            <input id="searchTerm" type="text" placeholder="search...." oninput="search()"
+                class=" w-50 ps-3 py-2 border-0 rounded-3">
+        </div>
+        <table class="table text-center container mt-4 fw-bold">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Website</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="display_book">
+
+            </tbody>
+        </table>
+
+
+    </main>
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
+<!-- <a href="" class="link-underline-light" target="_blank">Visit</a> -->

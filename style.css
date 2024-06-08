@@ -1,0 +1,112 @@
+*::selection {
+    background-color: #fec260;
+    color: #352e28;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    background-color: #f7ecde;
+    height: 100vh;
+}
+
+
+.BookMarker h1 {
+    font-family: "Pacifico", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 50px;
+    line-height: 60px;
+    color: rgb(53, 46, 40);
+    position: relative;
+    z-index: 333;
+    width: auto;
+}
+
+.BookMarker h1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fec260;
+    width: 260px;
+    height: 20px;
+    z-index: -1;
+
+    transition: all .4s;
+}
+
+.BookMarker h1:hover::before {
+    height: 35px;
+}
+
+.BookMarker-body {
+    border-width: 2px 0 2px 0;
+    border-style: dotted;
+    border-color: #352e28;
+}
+
+h2 {
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Righteous", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #d99c39;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+
+.BookMarker #btn button {
+    padding: 8px 50px;
+    border: 0;
+    border-color: #d1512d;
+    color: #fff;
+    background-color: #d1512d;
+    border-radius: 10px;
+    transition: all .2s;
+}
+
+.BookMarker #btn button:hover {
+    background-color: #bb4120;
+    border-color: #a03315;
+}
+
+.btn-delete {
+    color: #fff;
+    background: #eb1d36;
+    border: #eb1d36;
+    transition: all .2s;
+}
+
+.btn-delete:hover {
+    border: #ba081d;
+    background-color: #d30820;
+    color: #fff;
+}
+
+.btn-visit {
+    color: #fff;
+    background: #9eb23b;
+    border: #9eb23b;
+    transition: all .2s;
+}
+
+.btn-visit:hover {
+    border: #6e8018;
+    background-color: #8a9e23;
+    color: #fff;
+}
